@@ -248,26 +248,14 @@
                     </div>
                     <div class="timeline">
                       <!-- Single event -->
+                      {% for i in experience %}
                       <div class="timeline-event te-primary">
-                        <h5 class="event-date">Dec 2012 - Current</h5>
-                        <h4 class="event-name">Frontend-developer</h4>
-                        <span class="event-description">Web Agency</span>
-                        <p>Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.</p>
+                        <h5 class="event-date">{{ i.year }}</h5>
+                        <h4 class="event-name">{{ i.position }}</h4>
+                        <span class="event-description">{{ i.company_name }}</span>
+                        <p>{{ i.desc }}</p>
                       </div>
-                      <!-- Single event -->
-                      <div class="timeline-event te-primary">
-                        <h5 class="event-date">Dec 2011 - Nov 2012</h5>
-                        <h4 class="event-name">Web Designer</h4>
-                        <span class="event-description">Apple Inc.</span>
-                        <p>Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.</p>
-                      </div>
-                      <!-- Single event -->
-                      <div class="timeline-event te-primary">
-                        <h5 class="event-date">Jan 2010 - Dec 2011</h5>
-                        <h4 class="event-name">Graphic Designer</h4>
-                        <span class="event-description">Web Agency</span>
-                        <p>Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.</p>
-                      </div>
+                      {% endfor %}
                     </div>
                   </div>
 
