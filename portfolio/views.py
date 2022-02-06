@@ -5,8 +5,10 @@ from . models import *
 def main(request):
     about = About.objects.all()
     testimonial = Testimonials.objects.all()
+    education = Education.objects.all()
     context = {
         'about':about,
-        'testimonial':testimonial
+        'testimonial':testimonial,
+        'education':education
     }
     return render(request, 'index.html', context)

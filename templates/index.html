@@ -231,26 +231,14 @@
                     </div>
                     <div class="timeline">
                       <!-- Single event -->
+                      {% for i in education %}
                       <div class="timeline-event te-primary">
-                        <h5 class="event-date">2010</h5>
-                        <h4 class="event-name">Specialization Course</h4>
-                        <span class="event-description">University of Studies</span>
-                        <p>Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.</p>
+                        <h5 class="event-date">{{ i.year }}</h5>
+                        <h4 class="event-name">{{ i.name }}</h4>
+                        <span class="event-description">{{ i.uni_name }}</span>
+                        <p>{{ i.desc }}</p>
                       </div>
-                      <!-- Single event -->
-                      <div class="timeline-event te-primary">
-                        <h5 class="event-date">2009</h5>
-                        <h4 class="event-name">Specialization Course</h4>
-                        <span class="event-description">University of Studies</span>
-                        <p>Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.</p>
-                      </div>
-                      <!-- Single event -->
-                      <div class="timeline-event te-primary">
-                        <h5 class="event-date">2008</h5>
-                        <h4 class="event-name">Specialization Course</h4>
-                        <span class="event-description">University of Studies</span>
-                        <p>Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.</p>
-                      </div>
+                      {% endfor %}
                     </div>
                   </div>
 
