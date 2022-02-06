@@ -29,10 +29,10 @@ class Testimonials(models.Model):
     
 
 class Education(models.Model):
-    year = models.IntegerField(blank=True,null=True)
+    year = models.CharField(max_length=255,blank=True,null=True)
     name = models.CharField(max_length=255,null=True,blank=True)
     uni_name = models.CharField(max_length=255,null=True,blank=True)
-    desc = models.CharField(max_length=255,null=True,blank=True)
+    desc = models.TextField(null=True,blank=True)
     
     def __str__(self):
         return self.name
