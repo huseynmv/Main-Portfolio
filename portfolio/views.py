@@ -7,11 +7,13 @@ def main(request):
     testimonial = Testimonials.objects.all()
     education = Education.objects.all()
     experience = Experience.objects.all()
+    work = Work.objects.all()
     
     context = {
         'about':about,
         'testimonial':testimonial,
         'education':education,
-        'experience':experience
+        'experience':experience,
+        'work':work
     }
     return render(request, 'index.html', context)
