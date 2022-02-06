@@ -1,3 +1,4 @@
+from pydoc import describe
 from tabnanny import verbose
 from django.db import models
 
@@ -25,5 +26,17 @@ class Testimonials(models.Model):
     
     def __str__(self):
         return self.writer_name
+    
+
+class Education(models.Model):
+    year = models.IntegerField(blank=True,null=True)
+    name = models.CharField(max_length=255,null=True,blank=True)
+    uni_name = models.CharField(max_length=255,null=True,blank=True)
+    desc = models.CharField(max_length=255,null=True,blank=True)
+    
+    def __str__(self):
+        return self.name
+    
+
 
     
