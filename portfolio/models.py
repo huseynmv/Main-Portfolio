@@ -37,6 +37,15 @@ class Education(models.Model):
     def __str__(self):
         return self.name
     
+class Experience(models.Model):
+    year = models.CharField(max_length=255,blank=True,null=True)
+    position = models.CharField(max_length=255,null=True,blank=True)
+    company_name = models.CharField(max_length=255,null=True,blank=True)
+    desc = models.TextField(null=True,blank=True)
+    
+    def __str__(self):
+        return self.position
+    
 
 
     
