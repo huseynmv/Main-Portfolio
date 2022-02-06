@@ -4,6 +4,10 @@ from django.db.models import fields
 
 class ContactForm(forms.ModelForm):
     
+    email = forms.EmailField(label='Email', max_length=100, widget=forms.EmailInput(
+        attrs={'class': 'form-control', 'placeholder': 'Your Email...'}
+    ))
+    
     class Meta:
         model = Contact
         fields = '__all__'

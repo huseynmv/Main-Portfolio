@@ -155,7 +155,7 @@
                       <li><span class="title">Age</span><span class="value">{{ i.age }}</span></li>
                       <li><span class="title">Residence</span><span class="value">{{ i.residence }}</span></li>
                       <li><span class="title">Address</span><span class="value">{{ i.adress }}</span></li>
-                      <li><span class="title">E-mail</span><span class="value"><a href="https://lmpixels.com/cdn-cgi/l/email-protection#ef8a828e8683af8a978e829f838ac18c8082"><span class="__cf_email__" data-cfemail="2a4f474b43466a4f524b475a464f04494547">{{ i.email }}</span></a></span></li>
+                      <li><span class="title">E-mail</span><span class="value"><a href=""><span >{{ i.email }}</span></a></span></li>
                       <li><span class="title">Phone</span><span class="value">{{ i.phone }}</span></li>
                       {% endfor %}
                     </ul>
@@ -397,7 +397,7 @@
                         <i class="pe-7s-icon pe-7s-mail"></i>
                       </div>
                       <div class="ci-text">
-                        <h5><a href="https://lmpixels.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="84e5e8e1fcf7e9edf0ecc4e1fce5e9f4e8e1aae7ebe9">[email&#160;protected]</a></h5>
+                        <h5><a href="" class="" >[email&#160;protected]</a></h5>
                       </div>
                     </div>
                     <div class="contact-info-block">
@@ -422,34 +422,15 @@
                     <div class="block-title">
                       <h3>Contact Form</h3>
                     </div>
-                    <form id="contact-form" method="post" action="https://lmpixels.com/demo/unique/unique-vcard/contact_form/contact_form.php">
+                    <form id="contact-form" method="post" action="">
+                      {% csrf_token %}
 
-                      <div class="messages"></div>
-
-                      <div class="controls">
-                        <div class="form-group">
-                            <input id="form_name" type="text" name="name" class="form-control" placeholder="Full Name" required="required" data-error="Name is required.">
-                            <div class="form-control-border"></div>
-                            <i class="form-control-icon pe-7s-user"></i>
-                            <div class="help-block with-errors"></div>
-                        </div>
-
-                        <div class="form-group">
-                            <input id="form_email" type="email" name="email" class="form-control" placeholder="Email Address" required="required" data-error="Valid email is required.">
-                            <div class="form-control-border"></div>
-                            <i class="form-control-icon pe-7s-mail"></i>
-                            <div class="help-block with-errors"></div>
-                        </div>
-
-                        <div class="form-group">
-                            <textarea id="form_message" name="message" class="form-control" placeholder="Message for Me" rows="4" required="required" data-error="Please, leave me a message."></textarea>
-                            <div class="form-control-border"></div>
-                            <i class="form-control-icon pe-7s-comment"></i>
-                            <div class="help-block with-errors"></div>
-                        </div>
-
-                        <input type="submit" class="button btn-send" value="Send message">
-                      </div>
+                      {% for field in form %}
+                          {{ field.label_tag }}
+                          {{ field }}
+                        {% endfor %}
+                        <!-- <input type="submit" value="Send message"> -->
+                        <button type="submit">Send</button>
                     </form>
                   </div>
                 </div>
