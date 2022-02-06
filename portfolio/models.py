@@ -10,6 +10,9 @@ class About(models.Model):
     email = models.EmailField(max_length=255)
     phone = models.TextField(null=True, blank=True)
     
+    def __str__(self):
+        return 'About Myself'
+    
     class Meta:
         verbose_name = 'About Myself'
 

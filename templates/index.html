@@ -151,13 +151,13 @@
 
                   <div class="col-sm-6 col-md-6 col-lg-4 subpage-block">
                     <ul class="info-list">
-                      <li><span class="title">Age</span><span class="value">29</span></li>
-                      <li><span class="title">Residence</span><span class="value">USA</span></li>
-                      <li><span class="title">Address</span><span class="value">88 Some Street, Some Town</span></li>
-                      <li><span class="title">e-mail</span><span class="value"><a href="https://lmpixels.com/cdn-cgi/l/email-protection#ef8a828e8683af8a978e829f838ac18c8082"><span class="__cf_email__" data-cfemail="2a4f474b43466a4f524b475a464f04494547">[email&#160;protected]</span></a></span></li>
-                      <li><span class="title">Phone</span><span class="value">+0123 123 456 789</span></li>
-                      <li><span class="title">Skype</span><span class="value">alex.smith</span></li>
-                      <li><span class="title">Freelance</span><span class="value available">Available</span></li>
+                      {% for i in about %}
+                      <li><span class="title">Age</span><span class="value">{{ i.age }}</span></li>
+                      <li><span class="title">Residence</span><span class="value">{{ i.residence }}</span></li>
+                      <li><span class="title">Address</span><span class="value">{{ i.adress }}</span></li>
+                      <li><span class="title">E-mail</span><span class="value"><a href="https://lmpixels.com/cdn-cgi/l/email-protection#ef8a828e8683af8a978e829f838ac18c8082"><span class="__cf_email__" data-cfemail="2a4f474b43466a4f524b475a464f04494547">{{ i.email }}</span></a></span></li>
+                      <li><span class="title">Phone</span><span class="value">{{ i.phone }}</span></li>
+                      {% endfor %}
                     </ul>
 
                     <ul class="social-links">
