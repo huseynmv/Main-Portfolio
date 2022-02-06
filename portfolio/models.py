@@ -56,6 +56,17 @@ class Work(models.Model):
     def __str__(self):
         return self.name
     
+class Contact(models.Model):
+    full_name = models.CharField(max_length=100, blank=True, null=True)
+    email = models.CharField(max_length=100, blank=True, null=True)
+    message = models.TextField()
+    subject = models.CharField(max_length=100,)
+
+    def __str__(self):
+        return self.full_name
+    
+    
+    
     
 
 
