@@ -1,3 +1,4 @@
+from distutils.command.upload import upload
 from pydoc import describe
 from tabnanny import verbose
 from django.db import models
@@ -45,6 +46,16 @@ class Experience(models.Model):
     
     def __str__(self):
         return self.position
+    
+    
+class Work(models.Model):
+    name = models.CharField(max_length=255,blank=True,null=True)
+    link = models.URLField()
+    image = models.ImageField(upload_to='works/')
+    
+    def __str__(self):
+        return self.name
+    
     
 
 
