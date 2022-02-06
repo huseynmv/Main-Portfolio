@@ -4,7 +4,9 @@ from . models import *
 
 def main(request):
     about = About.objects.all()
+    testimonial = Testimonials.objects.all()
     context = {
-        'about':about
+        'about':about,
+        'testimonial':testimonial
     }
     return render(request, 'index.html', context)
