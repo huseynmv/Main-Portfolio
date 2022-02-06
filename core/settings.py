@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     
     # my apps
     
-    'portfolio'
+    'portfolio',
+    'contact',
 ]
 
 MIDDLEWARE = [
